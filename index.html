@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CHEQ: WebOTP demo</title>
+  <title>WebOTP demo | CHEQ</title>
   <style>
     body {
       width: 100vw;
@@ -31,9 +31,8 @@
           signal: ac.signal
         }).then(otp => {
           input.value = otp.code;
-          document.querySelector('button[type="submit"]').innerText = JSON.stringify(otp);
         }).catch(err => {
-          document.querySelector('button[type="submit"]').innerText = err.message;
+          console.error()
         });
       });
     }
@@ -41,8 +40,8 @@
 </head>
 <body>
   <form>
-    <input autocomplete="one-time-code" placeholder="Enter your OTP" name="otp" />
+    <input autocomplete="one-time-code" placeholder="Enter your OTP" name="otp" required />
     <button type="submit">Submit</button></form>
-  <br/>  
+  <br/>
 </body>
 </html>
