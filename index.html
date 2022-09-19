@@ -36,10 +36,14 @@
         });
       });
     }
+    function handleSubmit(e) {
+      e.preventDefault();
+      document.querySelector('button[type="submit"]').innerHTML = 'Form submitted!'
+    }
   </script>
 </head>
 <body>
-  <form>
+  <form onsubmit="">
     <input autocomplete="one-time-code" placeholder="Enter your OTP" name="otp" required />
     <button type="submit">Submit</button></form>
   <br/>
