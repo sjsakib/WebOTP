@@ -42,12 +42,12 @@
       document.querySelector('button[type="submit"]').innerHTML = 'Form submitted!'
     }
     document.onload= function () {
-      document.querySelector('form').onsubmit = handleSubmit;
+      document.querySelector('form').addEventListener('submit', handleSubmit)
     }
   </script>
 </head>
 <body>
-  <form onsubmit="handleSubmit">
+  <form>
     <input autocomplete="one-time-code" placeholder="Enter your OTP" name="otp" required />
     <button type="submit">Submit</button></form>
   <br/>
