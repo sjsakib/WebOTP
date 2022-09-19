@@ -41,6 +41,9 @@
       e.preventDefault();
       document.querySelector('button[type="submit"]').innerHTML = 'Form submitted!'
     }
+    document.onload= function () {
+      document.querySelector('form').onsubmit = handleSubmit;
+    }
   </script>
 </head>
 <body>
